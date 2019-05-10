@@ -9,7 +9,7 @@ class FavouriteRecipeCard extends Component {
       }
 
     render() {
-        const {item, actionBtnText} = this.props;
+        const { item, actionBtnText } = this.props;
         const imgURL  = item.image || IMAGE_PLACEHOLDER;
         return (
             <div className="recipe-card" >
