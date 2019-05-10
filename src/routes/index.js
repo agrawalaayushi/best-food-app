@@ -13,8 +13,9 @@ export default () => (
         <Route  path="/" render={(props) => <Header {...props}/>} />
         <Switch>
           <Route path="/" exact render={(props) => <Home {...props}/>} />
+          <Route path="/home" exact render={(props) => <Home {...props}/>} />
           <Route component={Error404} />
         </Switch>
-    </div>
+      </div>
    </BrowserRouter>
  )
