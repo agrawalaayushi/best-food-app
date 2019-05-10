@@ -15,6 +15,6 @@ export default () => (
           <Route path="/" exact render={(props) => <Home {...props}/>} />
           <Route component={Error404} />
         </Switch>
-    </div>
+      </div>
    </BrowserRouter>
  )
