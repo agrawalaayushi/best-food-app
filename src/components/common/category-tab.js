@@ -21,12 +21,10 @@ class CategoryTab extends Component {
   render() {
       const { category } = this.props
     return (
-    //   <div className="category-tab-wrapper">
         <div className="category-tab">
             <img className="tab-image" src={`${category.image}`} alt="Recipe_image"/>
             <div className="tab-name">{category.name}</div>
         </div>
-    //   </div>
     )
   }
 }

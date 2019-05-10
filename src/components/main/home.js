@@ -42,7 +42,7 @@ class Home extends Component {
     return (
         <div className="food-app-wrapper">
             {foodRecepies&& <Favourite recipes={foodRecepies}/>}
-            {foodCategories && <Category categories={foodCategories}/>}
+            {foodCategories && <Category categories={foodCategories} recipes={foodRecepies}/>}
         </div>
     );
   }
@@ -50,16 +50,16 @@ class Home extends Component {
 
 
 const mapStateToProps = state => ({
-    ...state,
-    foodCategories: state.reducer.get('foodCategories'),
-    foodRecepies: state.reducer.get('foodRecepies')
-   })
-  
-  const mapDispatchToProps = dispatch => ({
-    getFoodAppData: () => dispatch(requestFoodAppData()),
+  ...state,
+  foodCategories: state.reducer.get('foodCategories'),
+  foodRecepies: state.reducer.get('foodRecepies')
   })
-  
-  export default connect(mapStateToProps, mapDispatchToProps)(Home);
+
+const mapDispatchToProps = dispatch => ({
+  getFoodAppData: () => dispatch(requestFoodAppData()),
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
   
   
 

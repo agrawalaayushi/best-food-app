@@ -20,6 +20,7 @@ class Favourite extends Component {
     return <FavouriteRecipeCard
             key={index.toString()}
             item={item}
+            actionBtnText={'Reorder'}
           />
   }
   //-----------------------------------
@@ -27,24 +28,22 @@ class Favourite extends Component {
   //-----------------------------------
   
   render() {
-    console.log(this.props.recipes)
-    const {recipes} = this.props;
+    const { recipes } = this.props;
     return (
-        <div className="favourite-dish-wrapper">
-             <div className="heading">Favourite</div>
-             <div className="heading-content">
-                <div className="content">Enjoy what you have been ordering!</div>
-                <span>icon</span>
-             </div>
-           
-              { recipes.length > 0 ?
-                <div className={"favourite-recipe-wrp"}>
-                  { recipes.map((item, index) =>( this.getFavouriteRecipeCard(item, index) )) }
-                </div> :
-                <NoDataFound msg={"Recipes not available"}/>
-              }
-             {/* {recipes.map((item, index) =>( this.getFavouriteRecipeCard(item, index) )) } */}
+      <div className="favourite-dish-wrapper">
+        <div className="heading">Favourite</div>
+        <div className="heading-content">
+          <div className="content">Enjoy what you have been ordering!</div>
+          <span>icon</span>
         </div>
+      
+        { recipes.length > 0 ?
+          <div className={"favourite-recipe-wrp"}>
+            { recipes.map((item, index) =>( this.getFavouriteRecipeCard(item, index) )) }
+          </div> :
+          <NoDataFound msg={"Recipes not available"}/>
+        }
+      </div>
     );
   }
 }
