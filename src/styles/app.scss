@@ -26,24 +26,25 @@
     font-size: 10px;
   
   }
+
 .food-app-wrapper {
     margin-top: 50px;
     padding: 20px 10px;
+    .heading {
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .heading-content {
+      display: flex;
+      justify-content: space-between;
+      .content {
+        color: gray;
+        font-size: 12px;
+      }
+    }
     .favourite-dish-wrapper {
-      .heading {
-        font-weight: 600;
-        text-transform: uppercase;
-        font-size: 14px;
-        margin-bottom: 10px;
-      }
-      .heading-content {
-        display: flex;
-        justify-content: space-between;
-        .content {
-          color: gray;
-          font-size: 12px;
-        }
-      }
       .favourite-recipe-wrp {
         display: flex;
         overflow: hidden;
@@ -67,4 +68,52 @@
         }
       }
     }
+    .category-dish-wrapper{
+      margin-top: 30px;
+      .search-wrapper {
+        .search-box {
+          border-bottom: 1px solid #e5e5e5;
+          padding: 8px 0px;
+          outline: none;
+          border-right: none;
+          border-left: none;
+          border-top: none;
+          width: 100%;
+        }
+      }
+      .heading-wrp {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px auto;
+      }
+
+      .category-tab-wrp {
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        align-items: center;
+        font-size: 14px;
+        .category-tab {
+          width: 100px;
+          height: 40px;
+          margin-right: 10px;
+          @include space-between();
+          .tab-image {
+            width: 25px;
+            height: 25px;
+            padding-right: 5px; 
+          }
+          .tab-name {
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+}
+
+.no-page {
+  @include flex-center();
+  color: black;
+  height: 80vh;
+  font-size: 40px;
 }

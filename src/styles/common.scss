@@ -3,12 +3,9 @@
   align-items: center;
   justify-content: center;
 }
-.align-center {
-  display: flex;
-  align-items: center;
-}
-a {
-  text-decoration: none;
+
+.d-flex {
+  @include space-between();
 }
 .no-page {
   @include flex-center();
@@ -60,8 +57,5 @@ a {
 }
 .mute {
   font-weight: 300;
-}
-.bold {
-  font-weight: 600;
 }
 

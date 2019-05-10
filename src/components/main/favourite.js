@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FavouriteRecipeCard from '../common/favourite-recipe-card';
+import { NoDataFound } from '../common/no-data-found';
 
 class Favourite extends Component {
   constructor(props) {
@@ -17,8 +18,8 @@ class Favourite extends Component {
   //-----------------------------------
   getFavouriteRecipeCard (item, index) {
     return <FavouriteRecipeCard
-          key={index.toString()}
-          item={item}
+            key={index.toString()}
+            item={item}
           />
   }
   //-----------------------------------
@@ -40,9 +41,7 @@ class Favourite extends Component {
                 <div className={"favourite-recipe-wrp"}>
                   { recipes.map((item, index) =>( this.getFavouriteRecipeCard(item, index) )) }
                 </div> :
-                <div className= "data-not-available-wrp">
-                  <p className="data-not-available">Recipes not available</p>
-                </div>
+                <NoDataFound msg={"Recipes not available"}/>
               }
              {/* {recipes.map((item, index) =>( this.getFavouriteRecipeCard(item, index) )) } */}
         </div>

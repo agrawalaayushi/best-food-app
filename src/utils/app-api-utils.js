@@ -5,7 +5,7 @@ import {
 
 const API_URL = 'http://temp.dash.zeta.in';
 
-// GET UPCOMING MOVIES
+// GET FOOD APP DATA
 export function getFoodAppData(dispatch) {
   let url = `${API_URL}/food.php`;
   axios.get(url)

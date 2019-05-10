@@ -3,7 +3,7 @@ import {
   getFoodAppData
 } from '../utils/app-api-utils';
 
-// GET UPCOMING MOVIES
+// GET FOOD APP DATA
 export function requestFoodAppData(params) {
   return(dispatch)=>{
     getFoodAppData(dispatch, params);
