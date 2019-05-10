@@ -1,0 +1,20 @@
+@import "mixins.scss";
+
+.header-container-wrapper {
+    position: fixed;
+    min-height: 50px;
+    width: 100%;
+    background-color: #4aba64;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.food-app-wrapper {
+    margin-top: 50px;
+    padding: 20px;
+}
